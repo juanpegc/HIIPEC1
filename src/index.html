@@ -5,22 +5,188 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+
   <link rel="stylesheet" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <link rel="stylesheet" href="../node_modules/@splidejs/splide/dist/css/splide.min.css"><!-- splidejs -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" /> <!--Leaflet-->
   <title>UOC Boilerplate</title>
 </head>
 
+
 <body>
   <include src="./views/header.html"></include>
-  <div class="uoc-container">
-    <h1 class="uoc-title">
-      <i class="fa-solid fa-book"></i>Monumento a Miguel de Cervantes
+  <div class="container-title">
+    <h1 class="title">
+      <i class="fa-solid fa-book"></i> Monumento a Miguel de Cervantes
     </h1>
-    <p>
 
+  </div>
+  <div class="container-text">
+    <p>
+      El monumento a Miguel de Cervantes es un monumento de la ciudad española de Madrid construido en 1929, que se
+      encuentra en la plaza de España.
+    </p>
+    <h2>Historia</h2>
+    <p>
+      Al cumplirse los trescientos años de la muerte de Cervantes en 1916, se convocó en 1915 un concurso nacional para
+      la elección de un monumento conmemorativo en la recién construida plaza de España. El proyecto ganador fue el
+      presentado por el arquitecto Rafael Martínez Zapatero y el escultor Lorenzo Coullaut Valera. En 1920 se constituye
+      el comité de recaudación de fondos para la construcción del monumento en todos los países castellanohablantes, no
+      comenzando las obras hasta 1925, contando entonces con la colaboración adicional del arquitecto Pedro Muguruza,
+      que hace algunas modificaciones, suprimiendo ornamentaciones, balaustrada y una Victoria Alada que coronaba el
+      monumento, en su versión inicial. Aunque no completamente acabado, se inauguró el 13 de octubre de 1929.
+    </p>
+    <p>
+      Las figuras de honor en el monumento representan a Cervantes, sentado bajo un pedestal, con las estatuas en bronce
+      de Don Quijote y Sancho Panza cabalgando respectivamente sobre Rocinante y su acostumbrado jumento, en la base del
+      monumento principal.
+    </p>
+    <p>
+      Está coronado con una bola del mundo y los cinco continentes, alegoría de la difusión de la lengua española por
+      todo el mundo. Entre otras esculturas se encuentran la Realidad y la Ficción. Por la parte trasera del monumento
+      se representa a la Literatura española en la imagen de una mujer sosteniendo un libro. A los pies de esta
+      escultura se alza una fuente con los escudos, actualmente muy desgastados, de todos los países donde se utiliza la
+      lengua de Cervantes. Se representa también a un indio en la tradición de Alonso de Ercilla y su La Araucana y a
+      Perseo, que representaría la lírica clásica.
+    </p>
+    <p>
+      Durante los años 30 el monumento sufrió un parón considerable, no siendo reiniciado hasta la década de 1950,
+      cuando el hijo del escultor ganador del concurso, Federico Coullaut-Valera, completó el monumento añadiendo las
+      figuras de Dulcinea y Aldonza Lorenzo, y posteriormente (1960), los grupos de Rinconete y Cortadillo y de La
+      Gitanilla.
+    </p>
+    <p>
+      El 25 de noviembre de 2018, la Comunidad de Madrid declara el Monumento a Miguel de Cervantes Bien de Interés
+      Cultural (España).
     </p>
   </div>
+
+  <div class="container-images">
+
+    <ul id="thumbnails" class="thumbnails">
+      <li class="thumbnail">
+        <img src="assets/images/Img_1.jpeg"
+          alt="Miniatura en blanco y negro de las esculturas de Don Quijote y Sancho Panza">
+      </li>
+      <li class="thumbnail">
+        <img src="assets/images/Img_2.jpg"
+          alt="Miniatura en blanco y negro de las esculturas de Don Quijote y Sancho Panza">
+      </li>
+      <li class="thumbnail">
+        <img src="assets/images/Img_3.jpg" alt="Miniatura de la escultura de Rinconete y Cortadillo">
+      </li>
+      <li class="thumbnail">
+        <img src="assets/images/Img_5.jpg" alt="Miniatura de la escultura de la alegoría del valor mililtar">
+      </li>
+      <li class="thumbnail">
+        <img src="assets/images/Img_6.jpg" alt="Miniatura de la escultura de la alegoría del misticismo">
+      </li>
+      <li class="thumbnail">
+        <img src="assets/images/Img_7.jpg"
+          alt="Miniatura de un ángulo de la esultura de los cinco continentes leyendo Don Quijote">
+      </li>
+      <li class="thumbnail">
+        <img src="assets/images/Img_8.jpg"
+          alt="Miniatura de un ángulo de la esultura de los cinco continentes leyendo Don Quijote">
+      </li>
+      <li class="thumbnail">
+        <img src="assets/images/Img_9.jpg" alt="Miniatura del lado de la Literatura">
+      </li>
+      <li class="thumbnail">
+        <img src="assets/images/Img_10.jpg" alt="Miniatura de la escultura de la Literatura">
+      </li>
+      <li class="thumbnail">
+        <img src="assets/images/Img_11.jpg" alt="Miniatura de la escultura de la Gitanilla">
+      </li>
+    </ul>
+    <section id="main-carousel" class="splide" aria-label="Galería de imágenes del monumento">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <figure>
+              <img src="assets/images/Img_1.jpeg"
+                alt="Fotografía en blanco y negro de las esculturas de Don Quijote y Sancho Panza">
+              <figcaption>Esculturas de Don Quijote y Sancho Panza</figcaption>
+            </figure>
+          </li>
+          <li class="splide__slide">
+            <figure>
+              <img src="assets/images/Img_2.jpg"
+                alt="Fotografía en blanco y negro de las esculturas de Don Quijote y Sancho Panza">
+              <figcaption>Dulcinea del Toboso</figcaption>
+            </figure>
+          </li>
+          <li class="splide__slide">
+            <figure>
+              <img src="assets/images/Img_3.jpg" alt="Fotografía de la escultura de Rinconete y Cortadillo">
+              <figcaption>Rinconete y Cortadillo</figcaption>
+            </figure>
+          </li>
+          <li class="splide__slide">
+            <figure>
+              <img src="assets/images/Img_5.jpg"
+                alt="Fotografía de las esculturas principales de Don Quijote y Sancho Panza">
+              <figcaption>Esculturas de Don Quijote y Sancho Panza</figcaption>
+            </figure>
+          </li>
+          <li class="splide__slide">
+            <figure>
+              <img src="assets/images/Img_6.jpg"
+                alt="Fotografía de las esculturas principales de Don Quijote y Sancho Panza">
+              <figcaption>Esculturas de Don Quijote y Sancho Panza</figcaption>
+            </figure>
+          </li>
+          <li class="splide__slide">
+            <figure>
+              <img src="assets/images/Img_7.jpg"
+                alt="Fotografía de un ángulo de la esultura de los cinco continentes leyendo Don Quijote">
+              <figcaption>Los Cinco Continentes leyendo Don Quijote</figcaption>
+            </figure>
+          </li>
+          <li class="splide__slide">
+            <figure>
+              <img src="assets/images/Img_8.jpg"
+                alt="Fotografía de un ángulo de la esultura de los cinco continentes leyendo Don Quijote">
+              <figcaption>Los Cinco Continentes leyendo Don Quijote</figcaption>
+            </figure>
+          </li>
+          <li class="splide__slide">
+            <figure>
+              <img src="assets/images/Img_9.jpg" alt="Fotografía del lado de la Literatura">
+              <figcaption>Flanqueando la Alegoría de la Literatura se encuentran dos alegorías sobre una fuente
+              </figcaption>
+            </figure>
+          </li>
+          <li class="splide__slide">
+            <figure>
+              <img src="assets/images/Img_10.jpg" alt="Fotografía de la escultura de la Literatura">
+              <figcaption>Alegoría de la Literatura</figcaption>
+            </figure>
+          </li>
+          <li class="splide__slide">
+            <figure>
+              <img src="assets/images/Img_11.jpg" alt="Fotografía de la escultura de la Gitanilla">
+              <figcaption>La Gitanilla</figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+
+  <div>
+    <div id="map">
+      Mapa
+    </div>
+  </div>
+
   <include src="./views/footer.html"></include>
-  <script src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script> <!--Leaflet-->
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
 </body>
 
 </html>
