@@ -5,10 +5,10 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Segoe UI Symbol";
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
-$principal-color: #ffffff;
-$secondary-color: #d8bb5d;
-$bg: #424242;
-$bg-second: #606060;
+$principal-color: rgb(255, 255, 255);
+$secondary-color: rgb(216, 187, 93);
+$bg: rgb(66, 66, 66);
+$bg-second: rgb(96, 96, 96);
 
 $mqMinWidth: 574px;
 $tabletWidth: 810px;
